@@ -42,6 +42,8 @@ def q6():
     num1 = num-1
     num2 = num+1
     print(f'O número antecessor é {num1} e o sucessor é {num2}')
+    #ou print(f'Sucessor: {num+1})
+    #ou print(f'Antecessor: {num-1})
 #q6()
 
 #7. Faça um programa que leia o nome o endereço e o telefone de
@@ -51,6 +53,9 @@ def q7():
     end = input('Digite seu endereço: ')
     tel = input('Digite seu telefone: ')
     print(f'{nome}, seu endereço é {end} e seu telefone é {tel}')
+    #print('\nNOME\tEND\tFONE')
+    #print(f'{nome}\t\t{end}\t\t{tel}) \t é tabulação (TAB) e 
+    #todo print coloca numa linha nova  \n é new line (quebra de linha)
 #q7()
 
 #8. Faça um programa que leia dois números inteiros e imprima a
@@ -60,6 +65,7 @@ def q8():
     num2 = int(input ('Digite o segundo número: '))
     sub = num1-num2
     print(f'A diferença deles é: {sub}')
+    #print(f'{num1}-{num2} = {num1-num2}')
 #q8()
 
 #9. Faça um programa que leia um número real e imprima ¼ deste número.
@@ -67,6 +73,7 @@ def q9():
     num = float(input('Digite o número real: '))
     num1 = num/4    
     print (f'1/4 do número {num} é: {num1: .2f}')
+    #print(f'1/4 de {num} = {num/4}')
 #q9()
 
 #10. Faça um programa que leia três números reais e calcule a
@@ -78,21 +85,24 @@ def q10():
     num3 = float(input('Digite o 3º número real: '))
     media = ((num1+num2+num3)/3)
     print (f'A média é: {media: .2f}')
+    #print(f'Média de {num1}, {num2}, {num3} é igual a {media:.2f}')
 #q10()
 
 #11. Faça um programa que leia dois números reais e calcule as
 #    quatro operações básicas entre estes dois números, adição,
-#    subtração,multiplicação e divisão. Ao final, o programa
+#    subtração, multiplicação e divisão. Ao final, o programa
 #    deve imprimir os resultados dos cálculos.
 def q11():
-    num1 = int(input('Digite o 1º número inteiro: '))
-    num2 = int(input('Digite o 2º número inteiro: '))
-    num3 = int(input('Digite o 3º número inteiro: '))
-    num4 = int(input('Digite o 4º número inteiro: '))
-    soma = num1+num2+num3+num4
-    sub = num1-num2-num3-num4
-    mult = num1*num2*num3*num4
-    div = num1/num2/num3/num4
+    num1 = float(input('Digite o 1º número inteiro: '))
+    num2 = float(input('Digite o 2º número inteiro: '))
+    soma = num1+num2
+    #print(f'{num1}+{num2} = {num1+num2}')
+    sub = num1-num2
+    #print(f'{num1}-{num2} = {num1-num2}')
+    mult = num1*num2
+    #print(f'{num1}*{num2} = {num1*num2}')
+    div = num1/num2
+    #print(f'{num1}/{num2} = {num1/num2}')
     print (f'O resultado da soma é: {soma}; da subtração é: {sub}; da multiplicação é: {mult} e da divisão é: {div}')
 #q11()
 
@@ -101,22 +111,28 @@ def q11():
 #    imprimir o resultado do cálculo.
 def q12():
     num = float(input("Digite um número real: "))
-    print (f'O quadrado de {num} é: {num*num: .2f}')
+    #print (f'O quadrado de {num:.2f} é: {num*num: .2f}') 
+    #print(f'{num}*{num} = {num*num}) não é recomendado
+    print (f'math.pow({num},2) = {math.pow(num,2)}') #este indicado para float
+    #print (f'{num} **2 = {num**2}') indicado para int, é mais direto
 #q12()
 
 #13. Faça um programa que leia o saldo de uma conta poupança e
 #    imprima o novo saldo, considerando um reajuste de 2%.
 def q13():
-    num = float(input('Digite o saldo inicial: '))
+    num = float(input('Digite o saldo inicial: R$ '))
+    #num = round(float(input('Digite o saldo inicial: R$ ')),2) #round arredonda
     saldo = num * 0.02
+    #num = round(saldo,2) #arrendodará para duas casas decimais
     print (f'O saldo atualizado é de: {num + saldo: .2f}')
+    #print(f'Saldo de {num:.2f} + 2% = R$ {num*0.02 + num}) #ou {num*1.02}
 #q13()
 
 #14. Faça um programa que leia a base e a altura de um retângulo
 #    e imprima o perímetro (base*2 + altura*2) e a área (base * altura). 
 def q14():
-    base = float(input('Digite a base do retangulo: '))
-    altura = float(input('Digite a altura do retangulo: '))
+    base = float(input('Digite a base do retângulo: '))
+    altura = float(input('Digite a altura do retângulo: '))
     print (f'O perímetro do retangulo é: {base*2 + altura*2: .2f} e da área é: {base*altura}')
 #q14()
 
@@ -129,6 +145,12 @@ def q15():
     desc1 = desc / 100
     desc2 = valor*desc1
     print(f'O valor final é {valor-desc2: .2f}')
+    #resolução professor:
+    #valor = round(float(input('Valor do produto: R$)))
+    #desc_desejado = float(input('% do deconto de desejado: '))
+    #valor_desc = valor*desc_desejado/100
+    #print(f'Valor do desconto: R${valor_desc:.2f})
+    #print(f'Valor final do produto: R$ {valor-valor_desc})
 #q15()
 
 #16. Faça um programa que calcule o reajuste do salário de um
@@ -200,3 +222,6 @@ def q20():
     print(f'O valor em dólar é R$:{real1: .2f}')
 
 #q20()
+
+questao = input('Digite a questão a ser executada:')
+eval(f'q{questao}()') #transforma uma string (texto) em comando python
