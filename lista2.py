@@ -57,7 +57,7 @@ def q2():
         num2 = int(input ('Digite o segundo número inteiro: '))
         num = num1 + num2
         if num > 20:
-            print (f'A soma dos números é {num+8}.')
+            print (f'A soma dos números é {num} + 8 é: {num+8}.')
         else: 
             print (f'A soma dos números é {num-5}')
     except:
