@@ -37,14 +37,36 @@ def exemploCaso():      # serve apenas para valores conhecidos (poucos) e exatos
 
 #1. Faça um programa que leia dois valores numéricos inteiros e efetue
 #   a adição, caso o resultado seja maior que 10, apresentá-lo.
+def q1():
+    try:
+        num1 = int(input ('Digite o primeiro número inteiro: '))
+        num2 = int(input ('Digite o segundo número inteiro: '))
+        num = num1 + num2
+        if num >= 10:
+            print (f'A soma dos números é {num}.')
+    except:
+        print ('O valor digitado é inválido! São aceitos apenas valores inteiros. Tente novamente.')
 
 #2. Faça um programa que leia dois valores inteiros e efetue a adição.
 #   Caso o valor somado seja maior que 20, este deverá ser apresentado
 #   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
 #   20, este deverá ser apresentado subtraindo-se 5.
+def q2():
+    try:
+        num1 = int(input ('Digite o primeiro número inteiro: '))
+        num2 = int(input ('Digite o segundo número inteiro: '))
+        num = num1 + num2
+        if num > 20:
+            print (f'A soma dos números é {num+8}.')
+        else: 
+            print (f'A soma dos números é {num-5}')
+    except:
+        print ('O valor digitado é inválido! São aceitos apenas valores inteiros. Tente novamente.')
+
 
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
+
 
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
 
