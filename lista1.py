@@ -22,26 +22,39 @@ def q3():
     print ((x+y+z)/3)
 #q3()
 
-#4. Faça um programa que leia e imprima um número inteiro.
+#4. Faça um programa que leia e imprima um número inteiro.          #TRY: forma de proteger o programa
 def q4():
-    numero = int(input ('Digite um número inteiro: '))
-    print(f'O número é: {numero} ')
+    numero = 0
+    try:
+        numero = int(input ('Digite um número inteiro: '))
+        print(f'O número é: {numero} ')
+    except ValueError:
+        print ('O valor digitado é inválido! Apenas valores inteiros são aceitos. Tente novamente')
+    except:
+        print ('Erro desconhecido! Contate o administrador do sistema')
+    
 #q4()
     
 #5. Faça um programa que leia dois números reais e os imprima.
 def q5():
-    num1 = float(input ('Digite o primeiro número real: '))
-    num2 = float(input ('Digite o segundo número real: '))
-    print (f'Os números são: {num1:.2f} e {num2:.2f}')
+    try:
+        num1 = float(input ('Digite o primeiro número real: '))
+        num2 = float(input ('Digite o segundo número real: '))
+        print (f'Os números são: {num1:.2f} e {num2:.2f}')
+    except:
+        print ('O valor digitado é inválido! São aceitos apenas valores reais. Tente novamente.')
 #q5()
 
 #6. Faça um programa que leia um número inteiro e imprima o seu
 #   antecessor e o seu sucessor.
 def q6():
-    num = int(input ('Digite um número inteiro: '))
-    num1 = num-1
-    num2 = num+1
-    print(f'O número antecessor é {num1} e o sucessor é {num2}')
+    try:
+        num = int(input ('Digite um número inteiro: '))
+        num1 = num-1
+        num2 = num+1
+        print(f'O número antecessor é {num1} e o sucessor é {num2}')
+    except:
+        print ('O valor digitado é inválido! São aceitos apenas valores inteiros. Tente novamente.')
     #ou print(f'Sucessor: {num+1})
     #ou print(f'Antecessor: {num-1})
 #q6()
@@ -61,18 +74,24 @@ def q7():
 #8. Faça um programa que leia dois números inteiros e imprima a
 #   subtração deles.
 def q8():
-    num1 = int(input ('Digite o primeiro número: '))
-    num2 = int(input ('Digite o segundo número: '))
-    sub = num1-num2
-    print(f'A diferença deles é: {sub}')
+    try:
+        num1 = int(input ('Digite o primeiro número: '))
+        num2 = int(input ('Digite o segundo número: '))
+        sub = num1-num2
+        print(f'A diferença deles é: {sub}')
+    except:
+        print ('O valor digitado é inválido! São aceitos apenas valores inteiros. Tente novamente.')
     #print(f'{num1}-{num2} = {num1-num2}')
 #q8()
 
 #9. Faça um programa que leia um número real e imprima ¼ deste número.
 def q9():
-    num = float(input('Digite o número real: '))
-    num1 = num/4    
-    print (f'1/4 do número {num} é: {num1: .2f}')
+    try:
+        num = float(input('Digite o número real: '))
+        num1 = num/4    
+        print (f'1/4 do número {num} é: {num1: .2f}')
+    except:
+        print ('O valor digitado é inválido! São aceitos apenas valores reais. Tente novamente.')
     #print(f'1/4 de {num} = {num/4}')
 #q9()
 
