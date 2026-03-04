@@ -146,9 +146,27 @@ def q8():
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
 #   verificar se o ano de nascimento informado é válido.
+def q9():
+    try:
+        nasc = int(input('Digite seu ano de nascimento: '))
+        atual = 2026
+        idade = atual - nasc
+        print(f'Sua idade é: {idade}')
+    except:
+        print ('O valor digitado é inválido! São aceitos apenas valores inteiros. Tente novamente.')
+
 
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
+def q10():
+    try:
+        a = float(input('Digite o 1° número: '))
+        b = float(input('Digite o 2° número: '))
+        c = float(input('Digite o 3° número: '))
+        if a > b and a > c:
+            print(f'O número {a} é maior que {b} e, {c}')
+        elif b > c:
+            print(f' O número {b} é o maior número.')
 
 #11. Faça um programa que leia 3 números e imprima o maior deles.
 
