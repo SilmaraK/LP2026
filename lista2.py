@@ -59,29 +59,89 @@ def q2():
         if num > 20:
             print (f'A soma dos números é {num} + 8 é: {num+8}.')
         else: 
-            print (f'A soma dos números é {num-5}')
+            print (f'A soma dos números é {num} - 5 é: {num-5}')
     except:
         print ('O valor digitado é inválido! São aceitos apenas valores inteiros. Tente novamente.')
 
 
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
+def q3():
+    try:
+        num = float(input('Digite um número: '))
+        if num % 3 == 0:
+            print (f'O número {num} é múltiplo de 3.')
+        else: 
+            print (f'O número {num} não é múltiplo de 3.')
+    except:
+        print ('O valor digitado é inválido! São aceitos apenas valores inteiros. Tente novamente.')
 
 
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
+def q4():
+    try:
+        num = float(input('Digite um número: '))
+        if num % 5 == 0:
+            print(f'O número {num} é divisível por 5.')
+        else:
+            print(f'O número {num} não é divisível por 5')
+    except:
+        print ('O valor digitado é inválido! São aceitos apenas valores inteiros. Tente novamente.')
+
 
 #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
+def q5():
+    try:
+        num = float(input('Digite um número: '))
+        if num % 3 == 0 and num % 7 == 0:
+            print(f'O número {num: .0f} é divisível por 3 e 7.')
+        else:
+            print(f'O número {num: .0f} não é divisível por 3 e 7.')
+    except:
+        print ('O valor digitado é inválido! São aceitos apenas valores inteiros. Tente novamente.')
 
 #6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
 #   estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário
 #   bruto. Faça um programa que permita entrar com o salário bruto
 #   e o valor da prestação e informar se o empréstimo pode ou não ser concedido.
+def q6():
+    try:
+        sal = float(input('Digite o valor do salário bruto: '))
+        pres = float(input('Digite o valor da prestação: '))
+        emp = (sal*0.30)
+        if pres <= emp:
+            print (f'Empréstimo concedido.')
+        else:
+            print (f'Empréstimo negado')
+    except:
+        print ('O valor digitado é inválido! São aceitos apenas valores reais. Tente novamente.')
 
 #7. Faça um programa que leia um número e indique se o número está compreendido
 #   entre 20 e 50 ou não.
+def q7():
+    try:
+        num = float(input('Digite um número: '))
+        if num >= 20 and num <= 50:
+            print(f'Numero {num: .0f} encontra-se entre 20 a 50')
+        else:
+            print(f'Numero {num: .0f} fora da faixa de 20 a 50')
+    except:
+        print ('O valor digitado é inválido! São aceitos apenas valores reais. Tente novamente.')
 
 #8. Faça um programa que leia um número e imprima uma das mensagens:
 #   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
+def q8():
+    try:
+        num = float(input('Digite um número:'))
+        if num < 20:
+            print(f'Número menor que 20')
+        elif num == 20:
+            print(f'Número igual a 20')
+        else:
+            print(f'Número maior que 20')
+    except:
+        print ('O valor digitado é inválido! São aceitos apenas valores reais. Tente novamente.')
+
 
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
