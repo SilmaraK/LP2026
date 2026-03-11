@@ -164,11 +164,30 @@ def q10():
         b = float(input('Digite o 2° número: '))
         c = float(input('Digite o 3° número: '))
         if a > b and a > c:
-            print(f'O número {a} é maior que {b} e, {c}')
-        elif b > c:
-            print(f' O número {b} é o maior número.')
+            print(f'{a: .0f} ')
+        elif b > c and b > a:
+            print(f' O número {b: .0f} é o maior número.')
+        else:
+            print(f'O número {c: .0f} é o maior número.')
+    except:
+        print('O valor digitado é inválido! São aceitos apenas valores reais. Tente novamente.')
+
 
 #11. Faça um programa que leia 3 números e imprima o maior deles.
+def q11():
+    try:
+        a = float(input('Digite o 1° número: '))
+        b = float(input('Digite o 2° número: '))
+        c = float(input('Digite o 3° número: '))
+        if a > b and a > c:
+            print(f'O número {a: .0f} é o maior número.')
+        elif b > c and b > a:
+            print(f' O número {b: .0f} é o maior número.')
+        else:
+            print(f'O número {c: .0f} é o maior número.')
+    except:
+        print('O valor digitado é inválido! São aceitos apenas valores reais. Tente novamente.')
+
 
 #12. Faça um programa que leia a idade de uma pessoa e informe:
 #• Se é maior de idade
