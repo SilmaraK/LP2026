@@ -149,7 +149,7 @@ def q8():
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
 #   verificar se o ano de nascimento informado é válido.
-def q9():
+
    
 
 
@@ -167,7 +167,7 @@ def q10():
     resultado += f"{a} {b} {c}" if c<a<b else ""
     resultado += f"{a} {b} {c}" if c<b<a else ""
     print(resultado)
-    
+
     
 
     
@@ -190,16 +190,7 @@ def q11():
 #• Se é menor de idade
 #• Se é maior de 65 anos
 def q12():
-    try: 
-        idade = int(input('Digite sua idade: '))
-        if idade >=65:   # Se idade for maior ou igual a 60 
-            print('Melhor idade')
-        elif idade >= 18: # Senão se a idade for maior ou igual a 18
-            print('Maior de idade')
-        else:             # Senão
-            print('Menor de idade')
-    except:
-        print('O valor digitado é inválido. São aceitos apenas valores inteiros. Tente novamente.')
+   
 
 #13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota
 #da prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1,
@@ -207,17 +198,7 @@ def q12():
 #"Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
 #reprovação e as demais em prova final).
 def q13():
-    try:
-        nome = input('Digite seu nome: ')
-        nota1 = float(input('Digite a nota da 1ª prova: '))
-        nota2 = float(input('Digita a nota da 2ª prova: '))
-        media = nota1 + nota2 / 2
-        if media>=7:
-            print(f'{nome}, 1ª nota {nota1}, 2ª nota {nota2}, média das notas {media}, APROVADO')
-        elif media<7 and =3:
-            print(f'{nome}, 1ª nota {nota1}, 2ª nota {nota2}, média das notas {media}, PROVA FINAL')
-        else:
-            print(f'{nome}, 1ª nota {nota1}, 2ª nota {nota2}, média das notas {media}, REPROVADO')
+   
 
 
 
@@ -228,6 +209,7 @@ def q13():
 #Maior que R$600,00 e menor ou igual a R$1200,00 20%
 #Maior que R$1200,00 e menor ou igual a R$2000,00 25%
 #Maior que R$2000,00 30%
+
 
 #15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o
 #valor da compra for menor que R$20,00, caso contrário, o lucro será de 30%.

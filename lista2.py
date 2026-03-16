@@ -221,7 +221,7 @@ def q13():
         media = nota1 + nota2 / 2
         if media>=7:
             print(f'{nome}, 1ª nota {nota1}, 2ª nota {nota2}, média das notas {media}, APROVADO')
-        elif media<7 and =3:
+        #elif media<7 and =3:
             print(f'{nome}, 1ª nota {nota1}, 2ª nota {nota2}, média das notas {media}, PROVA FINAL')
         else:
             print(f'{nome}, 1ª nota {nota1}, 2ª nota {nota2}, média das notas {media}, REPROVADO')
@@ -235,10 +235,26 @@ def q13():
 #Maior que R$600,00 e menor ou igual a R$1200,00 20%
 #Maior que R$1200,00 e menor ou igual a R$2000,00 25%
 #Maior que R$2000,00 30%
+def q14():
+    sal = inputfloat('Digite o valor do salario: ')
+    if sal < 600 and >= 1200:
+        print(f'O valor de desconto é {sal*0.2}')
+    if sal > 1200 and >= 2000:
+        print(f'O valor de desconto é {sal*0.25}')
+    if sal > 2000:
+        print (f'O valor de desconto é {sal*0.30}')
+
+
 
 #15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o
 #valor da compra for menor que R$20,00, caso contrário, o lucro será de 30%.
 #Faça um programa que leia o valor do produto e imprima o valor da venda.
+def q15():
+    produto = inputfloat('Digite o valor do produto: ')
+    if produto <= 20:
+
+
+
 
 #16. A confederação brasileira de natação irá promover eliminatórias para o
 #próximo mundial. Faça um programa que receba a idade de um nadador e imprima
