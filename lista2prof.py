@@ -150,47 +150,40 @@ def q8():
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
 #   verificar se o ano de nascimento informado é válido.
 def q9():
-    try:
-        nasc = int(input('Digite seu ano de nascimento: '))
-        atual = 2026
-        idade = atual - nasc
-        print(f'Sua idade é: {idade}')
-    except:
-        print ('O valor digitado é inválido! São aceitos apenas valores inteiros. Tente novamente.')
+   
 
 
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
 def q10():
-    try:
-        a = float(input('Digite o 1° número: '))
-        b = float(input('Digite o 2° número: '))
-        c = float(input('Digite o 3° número: '))
-        if a > b and a > c:
-            print(f'{a: .0f} ')
-        elif b > c and b > a:
-            print(f' O número {b: .0f} é o maior número.')
-        else:
-            print(f'O número {c: .0f} é o maior número.')
-    except:
-        print('O valor digitado é inválido! São aceitos apenas valores reais. Tente novamente.')
+    a = inputint('Digite um número inteiro: ')
+    b = inputint('Digite um número inteiro: ')
+    c = inputint('Digite um número inteiro: ')
+    resultado=""
+    resultado += f"{a} {b} {c}" if a<b<c else ""
+    resultado += f"{a} {b} {c}" if a<c<b else ""
+    resultado += f"{a} {b} {c}" if b<a<c else ""
+    resultado += f"{a} {b} {c}" if b<c<a else ""
+    resultado += f"{a} {b} {c}" if c<a<b else ""
+    resultado += f"{a} {b} {c}" if c<b<a else ""
+    print(resultado)
+    
+    
+
+    
 
 
 #11. Faça um programa que leia 3 números e imprima o maior deles.
 def q11():
-    try:
-        a = float(input('Digite o 1° número: '))
-        b = float(input('Digite o 2° número: '))
-        c = float(input('Digite o 3° número: '))
-        if a > b and a > c:
-            print(f'O número {a: .0f} é o maior número.')
-        elif b > c and b > a:
-            print(f' O número {b: .0f} é o maior número.')
-        else:
-            print(f'O número {c: .0f} é o maior número.')
-    except:
-        print('O valor digitado é inválido! São aceitos apenas valores reais. Tente novamente.')
-
+    maior = inputint('Digite um número inteiro: ')
+    numero = inputint('Digite o segundo número: ')
+    if numero > maior:
+        maior = numero
+    numero = inputint('Digite um terceiro número:')
+    if numero > maior:
+        maior = numero
+    print(f'O maior número informado é {maior}')
+    
 
 #12. Faça um programa que leia a idade de uma pessoa e informe:
 #• Se é maior de idade
