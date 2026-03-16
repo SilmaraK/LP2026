@@ -243,7 +243,7 @@ def q14():
         print(f'O valor de desconto é {sal*0.25}')
     if sal > 2000:
         print (f'O valor de desconto é {sal*0.30}')
-
+    
 
 
 #15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o
@@ -251,7 +251,12 @@ def q14():
 #Faça um programa que leia o valor do produto e imprima o valor da venda.
 def q15():
     produto = inputfloat('Digite o valor do produto: ')
-    if produto <= 20:
+    if compra <= 20:
+        print ( {produto*1.45})
+    else 
+        print({produto*1.30})
+        
+        
 
 
 
