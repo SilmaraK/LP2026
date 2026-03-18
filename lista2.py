@@ -225,6 +225,8 @@ def q13():
             print(f'{nome}, 1ª nota {nota1}, 2ª nota {nota2}, média das notas {media}, PROVA FINAL')
         else:
             print(f'{nome}, 1ª nota {nota1}, 2ª nota {nota2}, média das notas {media}, REPROVADO')
+    except:
+        print('O valor digitado é inválido. São aceitos apenas valores inteiros. Tente novamente.')
 
 
 
@@ -237,30 +239,26 @@ def q13():
 #Maior que R$2000,00 30%
 def q14():
     sal = inputfloat('Digite o valor do salario: ')
-    if sal < 600 and >= 1200:
-        print(f'O valor de desconto é {sal*0.2}')
-    if sal > 1200 and >= 2000:
-        print(f'O valor de desconto é {sal*0.25}')
+    if sal < 600 or sal >= 1200:
+       print(f'O valor de desconto é $ {sal*0.2: .2f}')
+    if sal > 1200 or sal  >= 2000:
+        print(f'O valor de desconto é {sal*0.25: .2f}')
     if sal > 2000:
-        print (f'O valor de desconto é {sal*0.30}')
+        print (f'O valor de desconto é {sal*0.30: .2f}')
     
 
 
 #15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o
 #valor da compra for menor que R$20,00, caso contrário, o lucro será de 30%.
-#Faça um programa que leia o valor do produto e imprima o valor da venda.
+#Faça um programa que leia o valor do produto e imprima o valor da venda. (ESTÁ CORRETO, executado corretamente)
 def q15():
     produto = inputfloat('Digite o valor do produto: ')
-    if compra <= 20:
-        print ( {produto*1.45})
-    else 
+    if produto <= 20:
+        print ({produto*1.45})
+    if produto >20:
         print({produto*1.30})
         
         
-
-
-
-
 #16. A confederação brasileira de natação irá promover eliminatórias para o
 #próximo mundial. Faça um programa que receba a idade de um nadador e imprima
 #a sua categoria segundo a tabela a seguir:
@@ -270,6 +268,29 @@ def q15():
 #Juvenil A 11 - 13 anos
 #Juvenil B 14 - 17 anos
 #Sênior maiores de 18 anos
+def q16():
+    idade = inputint('Digite sua idade: ')
+    
+    if idade >= 14 or idade <= 17:
+        print('Sua categoria é Juvenil B.')
+    if idade >= 11 or idade <= 13:
+        print('Sua categoria é Juvenil A.')
+    if idade >= 8 or idade <= 10:
+        print('Sua categoria é Infantil B.') 
+    if idade >= 5 or idade <= 7:
+        print('Sua categoria é Infantil A.')
+    if idade >= 18:
+        print('Sua categoria é Sênior.')
+
+#maior = inputint('Digite sua idade: ')
+ #   numero = inputint('Digite o segundo número: ')
+  #  if numero > maior:
+   #     maior = numero
+    #numero = inputint('Digite um terceiro número:')
+   # if numero > maior:
+    #    maior = numero
+    #print(f'O maior número informado é {maior}')
+
 
 #17. Depois da liberação do governo para as mensalidades dos planos de saúde,
 #as pessoas começaram a fazer pesquisas para descobrir um bom plano, não
