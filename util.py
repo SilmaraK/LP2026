@@ -13,3 +13,4 @@ def inputfloat(msg):
     except ValueError:
         print ('ERRO: Valor informado não é um número real!.')
     return -1
+

@@ -239,12 +239,17 @@ def q13():
 #Maior que R$2000,00 30%
 def q14():
     sal = inputfloat('Digite o valor do salario: ')
-    if sal < 600 or sal >= 1200:
-       print(f'O valor de desconto é $ {sal*0.2: .2f}')
-    if sal > 1200 or sal  >= 2000:
-        print(f'O valor de desconto é {sal*0.25: .2f}')
-    if sal > 2000:
-        print (f'O valor de desconto é {sal*0.30: .2f}')
+    if sal <= 600 
+    print(f'Isento.')
+    elif sal <= 1200
+        desconto = sal*0.20
+       print(f'O valor de desconto é $ {desconto: .2f}')
+    elif <= 2000
+        desconto = sal0.25
+        print(f'O valor de desconto é {desconto: .2f}')
+    else:
+        desconto = sal*0.30
+        print (f'O valor de desconto é {desconto: .2f}')
     
 
 
