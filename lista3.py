@@ -87,9 +87,11 @@ def q7():
     nota1 = inputfloat('Nota1: ')
     nota2 = inputfloat('Nota2: ')
     media = nota1 + nota2 / 2
-    for i in range (2):
+    for i in range (1):
         
-        print(f'{nome} tem nota1 de  {nota1}; nota2 de {nota2} e media de {media: .1f}.')
+        print(f'{nome} tem nota1 de: {nota1}')
+        print(f'Nota2: {nota2}')
+        print(f'Media: {media: .1f}')
 
 
 #8. Faça um programa que permita entrar com o nome e o salário bruto de 10 pessoas.
@@ -99,6 +101,17 @@ def q7():
 #Salário menor que R$1300,00 Isento
 #Salário maior ou igual a R$1300,00 e menor que R$2300,00 10% do salário bruto
 #Salário maior ou igual a R$2300,00 15% do salário bruto
+def q8():
+    for i in range (10): 
+        nome = input('Digite seu nome: ')
+        sal = inputfloat('Digite seu salario: ')          
+        if sal < 1300:
+            print(f'Isento.')
+        elif sal < 2300:
+            print(f'Sua alíquota é de 10%: R${sal*0.10: .2f}')
+        else:
+            print(f'Sua alíquota é de 15%: R${sal*0.15: .2f}')
+     
 
 #9. No dia da estreia do filme "Procurando Dory", uma grande emissora de TV realizou
 #uma pesquisa logo após o encerramento do filme. Cada espectador respondeu
@@ -109,6 +122,35 @@ def q7():
 #• A quantidade de pessoas que responderam regular;
 #• A percentagem de pessoas que responderam bom entre todos os expectadores
 #analisados.
+def q9():
+    soma_idade = 0
+    qtde_exc = 0
+    qtde_bom = 0
+    qtde_reg = 0
+
+  
+    for i range (3):
+        nome = input('Digite seu nome: ')
+        idade = inputint('Digite sua idade: ')
+        opiniao = inputint('Qual sua opiniao (1-regular, 2-bom, 3-excelente): ')
+        
+        if opiniao == 3:
+            soma_idade += idade
+            qtde_exc += 1
+        elif opiniao == 1
+            qtde_reg +=1
+        elif opiniao ==2
+            qtde_bom +=1
+    if qtde_exc > 0
+        print(f'Média das idades {soma_idade/qtde_exc}')
+    
+
+
+
+            print(f'A média da idade das pessoas que responderam excelente foi {media}')
+
+
+
 
 #10. Em um campeonato Europeu de Volleyball, se inscreveram 30 países. Sabendo-se
 #que na lista oficial de cada país consta, além de outros dados, peso e idade de 12
