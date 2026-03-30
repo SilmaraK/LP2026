@@ -18,29 +18,29 @@ def exemploEnquanto(): # Quando não se sabe quantas iterações serão necessá
         opcao = int(input('Opção: '))
 
 #1.Faça um programa que imprima todos os números de 1 até 100.
-def q1():
+def q1() -> None:
     for c in range (1,101):       #for c in range (1,101)
         print (c, end=' ')              #print(c, end="")
     
 
 #2. Faça um programa que imprima todos os números pares de 100 até 1.
-def q2():
+def q2() -> None:
     for c in range (100,0,-2):
         print (c, end=' ')
 
 #3. Faça um programa que imprima os múltiplos de 5, no intervalo de 1 até 500.
-def q3():
+def q3() -> None:
     for c in range (1,505,5):
         print (c, end=' ')
 
 #4. Faça um programa que permita entrar com o nome, a idade e o sexo de 20
 #pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
 #e tiver mais de 21 anos.
-def q4():
+def q4() -> None:
     for i in range (20):
-        nome = input('Digite seu nome: ')
-        idade = inputint('Idade: ')
-        sexo = inputint('Digite seu sexo (1-Feminino, 2-Masculino): ')
+        nome: str = input('Digite seu nome: ')
+        idade: int = inputint('Idade: ')
+        sexo: str = inputint('Digite seu sexo (1-Feminino, 2-Masculino): ')
         if sexo == 2 and idade >=21:
             print(f'{nome} tem {idade} anos.')
     
@@ -48,13 +48,13 @@ def q4():
 #5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
 #sucessivas, crie um programa que calcule o produto de dois números inteiros
 #lidos. Suponha que os números lidos sejam positivos.
-def q5():
-    num1 = inputint('Digite o 1º número: ')
-    num2 = inputint('Digite o 2º número: ')
-    resultado = 0
+def q5() -> None :
+    num1: int = inputint('Digite o 1º número: ')
+    num2: int = inputint('Digite o 2º número: ')
+    resultado: int = 0
     for i in range (num2):
-        resultado = resultado + num1
-        print(f'O resultado do produto é {resultado}')
+        resultado += num1
+    print(f'O resultado {num1} * {num2} do produto é {resultado}')
 
 
 
@@ -127,9 +127,8 @@ def q9():
     qtde_exc = 0
     qtde_bom = 0
     qtde_reg = 0
-
   
-    for i range (3):
+    for i in range (3):
         nome = input('Digite seu nome: ')
         idade = inputint('Digite sua idade: ')
         opiniao = inputint('Qual sua opiniao (1-regular, 2-bom, 3-excelente): ')
@@ -137,17 +136,17 @@ def q9():
         if opiniao == 3:
             soma_idade += idade
             qtde_exc += 1
-        elif opiniao == 1
+        elif opiniao == 1:
             qtde_reg +=1
-        elif opiniao ==2
+        elif opiniao ==2:
             qtde_bom +=1
-    if qtde_exc > 0
+    if qtde_exc > 0:
         print(f'Média das idades {soma_idade/qtde_exc}')
     
 
 
 
-            print(f'A média da idade das pessoas que responderam excelente foi {media}')
+            #print(f'A média da idade das pessoas que responderam excelente foi {media}')
 
 
 
