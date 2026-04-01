@@ -83,13 +83,7 @@ def q6():
 #nome, nota da prova 1, nota da prova 2, e média das notas de cada aluno. Ao final,
 #imprimir a média geral da turma.
 def q7():
-
-    for _ in range(2):
-        nome: str = gerar_palavra()
-        nota1: float = random.randrange(0,11)
-        nota2: float = random.randrange(0,11)
-        media: float = nota1+nota2/2
-        print(f'{nome} possui nota 1 {nota1}, nota 2 {nota2} e media de {media}')
+    
 
 
     #nome = input('Digite seu nome: ')

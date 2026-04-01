@@ -31,3 +31,10 @@ def inputfloat(msg="Digite um número real: ",min=None,max=None):
     except Exception as e:
         print(e)
     return -1
+
+def gerar_palavra(min: int=4,max: int=10) -> str:
+    qtde_letras = random.randrange(min,max+1)
+    palavra=''
+    for _ in range(qtde_letras):
+        palavra += chr(random.randrange(65,91))
+    return palavra
