@@ -207,8 +207,8 @@ def q121() ->None:
     while saldo < 1_000_000:
         saldo = saldo + saldo*taxa + aporte
         mes += 1
-    ano: int = mes / 12
-    print(f'Levará {ano:.1f} anos para atingir a meta de R$1 milhão.')
+    ano: int = int(mes / 12)
+    print(f'Levará {ano} anos e {mes%12} meses para atingir a meta de R$1 milhão.')
 
 
 
