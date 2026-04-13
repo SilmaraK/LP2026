@@ -82,7 +82,7 @@ def q6():
 #prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
 #nome, nota da prova 1, nota da prova 2, e média das notas de cada aluno. Ao final,
 #imprimir a média geral da turma.
-def q7():
+#def q7():
     
 
 
@@ -162,15 +162,56 @@ def q9():
 #• O atleta mais pesado de cada time;
 #• O atleta mais jovem de cada time;
 #• O peso médio e a idade média de todos os participantes.
-
+#def q10() ->None:
+    
 #11. Construa um programa que leia vários números e informe quantos números
 #entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo
 #deverá cessar sua execução.
+def q11() ->None:
+    numero = 1
+    cont_100_200 = 0
+    qtde_numeros = 0
+    while numero != 0:
+        numero = random.randrange(0,200)
+        #print(numero)
+        cont_100_200 += 1 if 100<=numero<=200 else 0
+        qtde_numeros += 1
+    print(f'De {qtde_numeros} gerados, {cont_100_200} estão no intervalo entre 100 e 200!')
+
 
 #12. Dado um país A, com 5 milhões de habitantes e uma taxa de natalidade de 3% ao
 #ano, e um país B com 7 milhões de habitantes e uma taxa de natalidade de 2% ao
 #ano, fazer um programa que calcule e imprima o tempo necessário para que a
 #população do país A ultrapasse a população do país B.
+def q12() ->None:
+    pais_a: inteiro = 5_000_000
+    pais_b: inteiro = 7_000_000
+    anos: int = 0
+    while pais_a <= pais_b:
+        pais_a += int(pais_a*1.03)
+        pais_b += int(pais_b*1.02)
+        anos += 1
+    print(f'Serão necessário {anos} anos para país A ultrapassar a população do país B.')
+    print(f'População do país A = {int(pais_a)}')
+    print(f'População do país B = {int(pais_b)}')
+
+
+#12.1 Faça uma simulação de investimento para que se descubra quantos anos serão necessários 
+# para que se alcance a marca de 1 milhão de reais a partir de um saldo inicial, 
+#um aporte mensal regular e uma taxa de retorno mensal constante.
+def q121() ->None:
+    saldo: float = inputfloat('Saldo inicial: R$ ', min=0)
+    aporte: float = inputfloat('Aporte mensal: R$ ', min=0)
+    taxa: float = inputfloat('Taxa de retorno mensal (%): ', min=0.1)/100
+    mes = 0
+    while saldo < 1_000_000:
+        saldo = saldo + saldo*taxa + aporte
+        mes += 1
+    ano: int = mes / 12
+    print(f'Levará {ano:.1f} anos para atingir a meta de R$1 milhão.')
+
+
+
 
 #13. Uma empresa de fornecimento de energia elétrica faz a leitura mensal dos medidores
 #de consumo. Para cada consumidor, são digitados os seguintes dados:
@@ -185,6 +226,20 @@ def q9():
 #• O custo total para cada consumidor
 #• O total de consumo para os três tipos de consumidor
 #• A média de consumo dos tipos 1 e 2
+#def q13() ->None:
+    #total_tipo1: float = 0
+    #total_tipo2: float = 0
+    #total_tipo3: float = 0
+    #conttotal_1_2: float = 0
+
+    #for _ in range (10):
+    #num_consumidor: int = random.randrange(100)
+    #qtde_kwh: float = random.randrange(1,500)
+    #tipo_cod: int = random.choice(1,2,3)
+    #if tipo_cod = 1:
+        #total_tipo1 =  qtde_kwh * 0.30 
+
+
 
 #14. Faça um programa que leia vários números inteiros e apresente o fatorial de cada
 #número. O algoritmo encerra quando se digita um número menor do que 1.n
