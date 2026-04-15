@@ -3,6 +3,7 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
 from utilprof import inputint, inputfloat, gerar_palavra
 import random
+from typing import Final
 
 def exemploPara(): # Quando se sabe a qtde de repetições
     for c in range(10): #0-9 Baseado em intervalo (inicio e fim)
@@ -205,7 +206,7 @@ def q121() ->None:
     taxa: float = inputfloat('Taxa de retorno mensal (%): ', min=0.1)/100
     mes = 0
     while saldo < 1_000_000:
-        saldo = saldo + saldo*taxa + aporte
+        saldo = saldo + aporte + saldo*taxa
         mes += 1
     ano: int = int(mes / 12)
     print(f'Levará {ano} anos e {mes%12} meses para atingir a meta de R$1 milhão.')
@@ -226,18 +227,44 @@ def q121() ->None:
 #• O custo total para cada consumidor
 #• O total de consumo para os três tipos de consumidor
 #• A média de consumo dos tipos 1 e 2
-#def q13() ->None:
-    #total_tipo1: float = 0
-    #total_tipo2: float = 0
-    #total_tipo3: float = 0
-    #conttotal_1_2: float = 0
+def q13() ->None:
+    total_tipo1: float = 0
+    total_tipo2: float = 0
+    total_tipo3: float = 0
+    custo_total = 0
+    consumo1 = 0
+    consumo2 = 0
+    consumo3 = 0
+    #conttotal_1_2: float = 0      
+    cont = 0
+    num_consumidor = 1
+    for dia in range (1,31):
+        num_consumidor: int = random.randrange(1,100)
+        cod: int = random.choice([1,2,3])
+        qtde_kwh: float = random.randrange(1,500)
 
-    #for _ in range (10):
-    #num_consumidor: int = random.randrange(100)
-    #qtde_kwh: float = random.randrange(1,500)
-    #tipo_cod: int = random.choice(1,2,3)
-    #if tipo_cod = 1:
-        #total_tipo1 =  qtde_kwh * 0.30 
+        if cod == 1:
+            custo = qtde_kwh*0.3
+            cont +=1
+            consumo1 += qtde_kwh
+            total_tipo1 += custo
+            print(f'O consumo total de {cont} residencias foi R${custo_total: .2f} ')
+        elif cod == 2:
+            custo = qtde_kwh*0.5
+            cont +=1
+            consumo2 += qtde_kwh
+            total_tipo2 += custo
+            print(f'O consumo total de {cont} residencias foi R$ {custo: .2f} ')
+        else:
+            custo = qtde_kwh*0.7
+            cont +=1
+            consumo3 += qtde_kwh
+            total_tipo3 += custo
+            print(f'O consumo total de {cont} residencias foi R${custo: .2f} ')
+        
+        total_geral =  total_tipo1 + total_tipo2 + total_tipo3 
+    print(f'O consumo total de kwh foi de {consumo_total: .0f}')
+    print(f'O valor total foi de {total_geral: .0f}')
 
 
 
