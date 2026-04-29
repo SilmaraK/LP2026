@@ -1,5 +1,6 @@
 import random
 from utilprof import inputint, inputfloat, gerar_palavra
+from typing import Final
 
 '''
 Lista de Exercícios referentes a coleções e arquivos em python
@@ -39,16 +40,45 @@ def q21() -> None:
 
 #3. Construa uma programa que armazene 15 números em uma lista e imprima
 #uma listagem numerada contendo o número e uma das mensagens: par ou ímpar.
+def q3() -> None:
+    numeros: list = [random.randrange(200) for _ in range(15)]
+    for posicao, numero in enumerate(numeros):
+        print(f'[{str(posicao):<2}]: {str(numero):>3} ({"PAR" if numero%2==0 else "IMPAR"})')
 
 
 #4. Faça um programa que armazene 8 números em uma lista e imprima todos os
 #números. Ao final, imprima o total de números múltiplos de seis.
+def q4() -> None:
+    numeros: list[int] = [random.randrange(100) for _ in range(8)]
+    print(numeros)
+    for n in numeros:
+        if n % 6 == 0:
+            total_multiplos = total_multiplos + 1
+    print(f'Total de múltiplos de seis: {total_multiplos}')
+
+    
 
 #5. Faça um programa que armazene as notas das provas 1 e 2 de 15 alunos. Calcule
 #e armazene a média arredondada. Armazene também a situação do aluno: 1-
 #Aprovado ou 2-Reprovado. Ao final o programa deve imprimir uma listagem
 #contendo as notas, a média e a situação de cada aluno em formato tabulado.
 #Utilize quantas listas forem necessárias para armazenar os dados.
+def q5():
+    alunos: list [dict] = []
+    for matricula in range(1,16):
+        
+        nome: str = gerar_palavra()
+        prova1: float = round(random.random()*10,1)
+        prova2: float = round(random.random()*10,1)
+        media: int = ((prova1+prova2)//2)
+    if media >= 6:
+        
+     
+
+
+
+
+
 
 #6. Construa um programa que permita armazenar o salário de 20 pessoas. Calcular
 #e armazenar o novo salário sabendo-se que o reajuste foi de 8%. Imprimir uma
