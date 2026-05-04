@@ -1,3 +1,4 @@
+
 import random
 from utilprof import inputint, inputfloat, gerar_palavra
 from typing import Final
@@ -64,31 +65,44 @@ def q4() -> None:
 #contendo as notas, a média e a situação de cada aluno em formato tabulado.
 #Utilize quantas listas forem necessárias para armazenar os dados.
 def q5():
-    alunos: list [dict] = []
-    for matricula in range(1,16):
-        nome: str = gerar_palavra()
-        prova1: float = round(random.random()*10,1)
-        prova2: float = round(random.random()*10,1)
-        media: int = round((prova1+prova2)/2)
-        if media >= 6:
-            situacao = "Aprovado"
-        else: 
-            situacao = "Reprovado"
-        aluno = {"matricula": matricula, "nome": nome, "prova1": prova1, "prova2": prova2, "media": media, "situação": situacao}
-        aluno.append(aluno)
-    print(f'{'Mat': <5} {'Nome':<12}')
-        
+    alunos: list[dict] = []
+    # alimenta uma lista com 15 alunos
+    for c in range(1,16):
+        aluno: dict = dict()
+        aluno["matricula"]:int = c
+        aluno["nome"]:str = gerar_palavra(max=5)
+        aluno["nota1"]: float = round(random.random()*10,1)
+        aluno["nota2"]:float = round(random.random()*10,1)
+        aluno["media"]:float = round((aluno["nota1"] + aluno["nota2"])/2,1)
+        aluno["situacao"]:str = "Aprovado" if aluno["media"] >= 6 else "Reprovado"
+        alunos.append(aluno)
+    # Percorrer a lista de alunos para imprimir o diário
+    print("MAT\tNOME\tN1\tN2\tMD\tST")
+    for aluno in alunos:
+        print(f'{aluno["matricula"]}\t{aluno["nome"]}\t{aluno["nota1"]}\t{aluno["nota2"]}\t{aluno["media"]}\t{aluno["situacao"]}')
+
      
-
-
-
-
 
 
 #6. Construa um programa que permita armazenar o salário de 20 pessoas. Calcular
 #e armazenar o novo salário sabendo-se que o reajuste foi de 8%. Imprimir uma
 #listagem numerada com o salário e o novo salário. Declare quantas listas forem
 #necessárias.
+def q6() -> None:
+    funcionarios: list [dict] = []
+    for c in range(1,21):
+        funcionario: dict = {}
+        funcionario ["matricula"]: int = c
+        funcionario["nome"]: str = gerar_palavra(max=5)
+        funcionario ["salario"]: float = round(random.random()*1000,2)
+        funcionario["reajuste"]: float = round((funcionario["salario"])*1.08,2)
+        funcionarios.append(funcionario)
+    print("MAT\tNOME\tSAL\tREAJ")
+    for funcionario in funcionarios:
+        print(f'{funcionario["matricula"]}\t{funcionario["nome"]}\t{funcionario['salario']}\t{funcionario['reajuste']}')
+
+
+
 
 #7. Crie um programa que leia o preço de compra e o preço de venda de 100 mercadorias
 #(utilize listas). Ao final, o programa deverá imprimir quantas mercadorias
@@ -96,6 +110,18 @@ def q5():
 #• lucro < 10%
 #• 10% <= lucro <= 20%
 #• lucro > 20%
+def q7() -> None:
+    produtos: list[dict] = []
+    for c in range(1,101):
+        produto: dict = {}
+        produto ["relacao"]: int = c
+        produto ["compra"]: float = round(random.random()*100,2)
+        produto ["venda"]: float = produto["compra"]*
+
+
+
+
+
 
 #8. Construa um programa que armazene o código, a quantidade, o valor de compra
 #e o valor de venda de 30 produtos. A listagem pode ser de todos os produtos ou

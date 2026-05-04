@@ -1,3 +1,5 @@
+import random
+
 def inputint(msg="Digite um valor inteiro: ",min=None,max=None):
     erro = True
     while erro == True:
@@ -32,7 +34,7 @@ def inputfloat(msg="Digite um número real: ",min=None,max=None):
         print(e)
     return -1
 
-def gerar_palavra(min: int=4,max: int=10) -> str:
+def gerar_palavra(min: int=4, max: int=10) -> str:
     qtde_letras = random.randrange(min,max+1)
     palavra=''
     for _ in range(qtde_letras):
