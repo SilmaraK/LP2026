@@ -66,12 +66,17 @@ def q4() -> None:
 def q5():
     alunos: list [dict] = []
     for matricula in range(1,16):
-        
         nome: str = gerar_palavra()
         prova1: float = round(random.random()*10,1)
         prova2: float = round(random.random()*10,1)
-        media: int = ((prova1+prova2)//2)
-    if media >= 6:
+        media: int = round((prova1+prova2)/2)
+        if media >= 6:
+            situacao = "Aprovado"
+        else: 
+            situacao = "Reprovado"
+        aluno = {"matricula": matricula, "nome": nome, "prova1": prova1, "prova2": prova2, "media": media, "situação": situacao}
+        aluno.append(aluno)
+    print(f'{'Mat': <5} {'Nome':<12}')
         
      
 
