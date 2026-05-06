@@ -115,8 +115,10 @@ def q7() -> None:
     for c in range(1,101):
         produto: dict = {}
         produto ["relacao"]: int = c
-        compra: float = round(random.uniform(10,100),2)
-        venda: float = round(random.uniform(1.05,1.30),2)
+        compra: float = round(random.uniform(10,100),2) 
+        venda = 0
+        while venda <= compra:                                                    #incluir laço de repetição (while) para usar apenas os valores que forem  
+        #venda: float = round(random.uniform(1.05,1.30),2)                        # superiores ao valor de compra
         produto ["compra"] = compra
         produto ["venda"] = venda
         produtos.append(produto)
@@ -142,14 +144,20 @@ def q7() -> None:
  
 
 
-
-
-
-
-
 #8. Construa um programa que armazene o código, a quantidade, o valor de compra
 #e o valor de venda de 30 produtos. A listagem pode ser de todos os produtos ou
 #somente de um ao se digitar o código. Utilize dicionário como estrutura de dados.
+
+
+
+
+
+
+
+
+
+
+
 
 #9. Faça um programa que leia dois conjuntos de números inteiros, tendo
 #cada um 10 elementos. Ao final o programa deve listar os elementos comuns aos
