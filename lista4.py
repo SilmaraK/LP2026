@@ -115,8 +115,32 @@ def q7() -> None:
     for c in range(1,101):
         produto: dict = {}
         produto ["relacao"]: int = c
-        produto ["compra"]: float = round(random.random()*100,2)
-        produto ["venda"]: float = produto["compra"]*
+        compra: float = round(random.uniform(10,100),2)
+        venda: float = round(random.uniform(1.05,1.30),2)
+        produto ["compra"] = compra
+        produto ["venda"] = venda
+        produtos.append(produto)
+
+    lucro_menor:float = 0
+    lucro_medio:float = 0
+    lucro_maior:float = 0
+    
+    for p in produtos:
+        lucro_valor = p["venda"]-p["compra"]
+        percentual_lucros: float = ((lucro_valor / p["compra"])*100)
+        if percentual_lucros < 10:
+            lucro_menor += 1
+        elif percentual_medio <= 20:
+            lucro_medio += 1
+        else:
+            lucro_maior += 1
+    print(f'RELATÓRIO DE LUCRO')
+    
+    print(f'Lucro menor que 10%: {lucro_menor} produtos')
+    print(f'Lucro médio entre 10 a 20%: {lucro_medio} produtos')
+    print(f'Lucro maior acima de 20%: {lucro_maior} produtos')
+ 
+
 
 
 
