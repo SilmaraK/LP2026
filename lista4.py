@@ -116,28 +116,26 @@ def q7() -> None:
         produto: dict = {}
         produto ["relacao"]: int = c
         compra: float = round(random.uniform(10,100),2) 
-        venda = 0
-        while venda <= compra:                                                    #incluir laço de repetição (while) para usar apenas os valores que forem  
-        #venda: float = round(random.uniform(1.05,1.30),2)                        # superiores ao valor de compra
+        valor_venda = 0
+        while valor_venda <= compra[c]:                                                    #incluir laço de repetição (while) para usar apenas os valores que forem  
+            valor_venda = round(compra * random.uniform(1.05, 1.40), 2)                        # superiores ao valor de compra
+            print(f"Produto {c}: Compra {compra} | Venda {venda}")
         produto ["compra"] = compra
         produto ["venda"] = venda
         produtos.append(produto)
-
     lucro_menor:float = 0
     lucro_medio:float = 0
     lucro_maior:float = 0
-    
     for p in produtos:
         lucro_valor = p["venda"]-p["compra"]
         percentual_lucros: float = ((lucro_valor / p["compra"])*100)
         if percentual_lucros < 10:
             lucro_menor += 1
-        elif percentual_medio <= 20:
+        elif percentual_lucros <= 20:
             lucro_medio += 1
         else:
             lucro_maior += 1
     print(f'RELATÓRIO DE LUCRO')
-    
     print(f'Lucro menor que 10%: {lucro_menor} produtos')
     print(f'Lucro médio entre 10 a 20%: {lucro_medio} produtos')
     print(f'Lucro maior acima de 20%: {lucro_maior} produtos')
@@ -149,27 +147,41 @@ def q7() -> None:
 #somente de um ao se digitar o código. Utilize dicionário como estrutura de dados.
 
 
-
-
-
-
-
-
-
-
-
-
 #9. Faça um programa que leia dois conjuntos de números inteiros, tendo
 #cada um 10 elementos. Ao final o programa deve listar os elementos comuns aos
 #conjuntos.
+def q9() -> None:
+    listaA = []
+    listaB = []
+    comuns = []
+    for i in range(10):
+        listaA.append(random.randint(1,30))
+        listaB.append(random.randint(1,30))
+    print(f'Lista A: {listaA} ')
+    print(f'Lista B: {listaB}')
+
+    for elemento in listaA:
+        if elemento in listaB:
+            if elemento not in comuns:
+                comuns.append(elemento)
+    print(f'Elementos comuns: {comuns}')
+
 
 #10. Faça um programa que leia uma lista com 10 elementos e obtenha outra lista resultado
 #cujos valores são os fatoriais da lista original.
 #Imprimir o maior e o menor, sem ordenar, o percentual de números pares e a
 #média dos elementos da lista.
 
+
+
+
 #11. Imprimir o maior e o menor, sem ordenar, o percentual de números pares e a
 #média dos elementos da lista.
+
+
+
+ 
+
 
 #12. Crie um programa para gerenciar um sistema de reservas de mesas em uma casa
 #de espetáculo. A casa possui 30 mesas de 5 lugares cada. O programa deverá
