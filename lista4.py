@@ -139,12 +139,36 @@ def q7() -> None:
     print(f'Lucro menor que 10%: {lucro_menor} produtos')
     print(f'Lucro médio entre 10 a 20%: {lucro_medio} produtos')
     print(f'Lucro maior acima de 20%: {lucro_maior} produtos')
+    
+    
  
 
 
 #8. Construa um programa que armazene o código, a quantidade, o valor de compra
 #e o valor de venda de 30 produtos. A listagem pode ser de todos os produtos ou
 #somente de um ao se digitar o código. Utilize dicionário como estrutura de dados.
+def q8() -> None:
+    qtde_produtos: int = 5
+    produtos: list[dict] = []
+    with open('resultado_q8.txt','a') as arquivo: 
+        arquivo.write('========================\n')
+        print('COD\tQTDE\tV_COMPRA\tV_VENDA\t')
+        arquivo.write('COD\tQTDE\tV_COMPRA\tV_VENDA\t\n')
+        for c in range (qtde_produtos):
+            produto:dict = dict()
+            produto["codigo"] = c
+            produto["qtde"] = (random.randint(1,51))
+            produto["valor_compra"]: list[float] = round(random.random()*5000,2) #for _ in range(qtde_produtos)]
+            produto["valor_venda"] : list[float] = round(random.random()*10000,2)
+            print(f'{produto["codigo"]}\t{produto["qtde"]}\t{produto["valor_compra"]:>8}\t{produto["valor_venda"]:<1}\t')
+            arquivo.write(f'{produto["codigo"]}\t{produto["qtde"]}\t{produto["valor_compra"]:>8}\t{produto["valor_venda"]:<1}\t\n')
+    #for produto in produtos:
+        #print(f'{produto["codigo"]}\t{produto["qtde"]}\t{produto["valor_compra"]}\t{produto["valor_venda"]}\t')    
+    
+        #for posicao, numero in enumerate(produtos):      
+        #    print(f'[{str(posicao):<2}]: {str(produto):>3} 
+        #    arquivo.write(f'[{str(posicao):<2}]: {str(produto):>3} 
+
 
 
 #9. Faça um programa que leia dois conjuntos de números inteiros, tendo
