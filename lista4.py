@@ -2,6 +2,7 @@
 import random
 from utilprof import inputint, inputfloat, gerar_palavra
 from typing import Final
+import math
 
 '''
 Lista de Exercícios referentes a coleções e arquivos em python
@@ -188,13 +189,35 @@ def q9() -> None:
         if elemento in listaB:
             if elemento not in comuns:
                 comuns.append(elemento)
-    print(f'Elementos comuns: {comuns}')
+    #print(f'Elementos comuns: {comuns}')  - se ficar aqui em cima não grava no arquivo
+    with open('resultado_q9.txt','a') as arquivo: 
+        arquivo.write('========================\n')
+        print(f'Elementos comuns: {comuns}')
+        arquivo.write(f'Elementos comuns: {comuns}\t\n')
 
 
 #10. Faça um programa que leia uma lista com 10 elementos e obtenha outra lista resultado
 #cujos valores são os fatoriais da lista original.
 #Imprimir o maior e o menor, sem ordenar, o percentual de números pares e a
 #média dos elementos da lista.
+def q10():
+    lista_original: int = []
+    for i in range (10):
+        lista_original.append(random.randint(1,30))
+    print(f'Lista Original (aleatória): {lista_original}')
+    fatorial = [math.factorial(i) for i in lista_original]
+    print(f'Lista Fatorial: {fatorial}')
+    maior = max(fatorial)
+    menor = min(fatorial)
+    media = sum(fatorial)/len(fatorial)
+    print(f'Maior: {maior}    Menor: {menor}    Media: {media}\n')
+    cont_pares = sum(1 for f in fatorial if f % 2 == 0)
+    percentual_pares = (cont_pares / len(fatorial)) * 100
+    print(f'Percentual de Pares: {percentual_pares:.1f}%')
+
+
+
+
 
 
 
