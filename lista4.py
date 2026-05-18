@@ -151,6 +151,10 @@ def q7() -> None:
 def q8() -> None:
     qtde_produtos: int = 5
     produtos: list[dict] = []
+    #xqtde = []
+    #yvalor_compra = []
+    #xqtde = []
+    #yvalor_venda = []
     with open('resultado_q8.txt','a') as arquivo: 
         arquivo.write('========================\n')
         print('COD\tQTDE\tV_COMPRA\tV_VENDA\t')
@@ -217,17 +221,41 @@ def q10():
 
 
 
-
-
-
-
-
 #11. Imprimir o maior e o menor, sem ordenar, o percentual de números pares e a
 #média dos elementos da lista.
+def q11() -> None:
+    lista_original: int = []
+    for i in range (10):
+        lista_original.append(random.randint(1,30))
+    print(f'Lista Original (aleatória): {lista_original}')
+    maior = lista_original[0]
+    menor = lista_original[0]
+    soma = 0
+    contarPares = 0
+    totalElementos = len(lista_original)
+    for num in lista_original:
+        if num > maior: 
+            maior = num
+        if num < menor:
+            menor = num
+        soma += num
+        if num % 2 == 0:
+            contarPares += 1
+    media = soma / totalElementos
+    percentualPares = (contarPares/totalElementos) *100
+    with open('resultado_q11.txt','a') as arquivo: 
+        arquivo.write('========================\n')
+        arquivo.write (f'Maior número: {maior}\t\n')
+        arquivo.write (f'Maior número: {maior}\t\n')
+        arquivo.write (f'Menor número: {menor}\t\n')
+        arquivo.write (f'Média dos elementos: {media}\t\n')
+        arquivo.write (f'Percentual de números pares: {percentualPares:.2f}\t\n')
+    
+    print(f'Maior número: {maior}\t')
+    print(f'Menor número: {menor}\t')
+    print(f'Média dos elementos: {media}\t')
+    print(f'Percentual de números pares: {percentualPares:.2f}\t')
 
-
-
- 
 
 
 #12. Crie um programa para gerenciar um sistema de reservas de mesas em uma casa
@@ -239,6 +267,10 @@ def q10():
 #o código 0 (zero) para uma mesa ou quando todos os 150 lugares estiverem
 #ocupados.
 
+
+
+
+
 #13. Construa um programa que realize as reservas de passagens áreas de uma companhia.
 #O programa deve permitir cadastrar o número de 10 voos e definir a
 #quantidade de lugares disponíveis para cada um. Após o cadastro, leia vários
@@ -249,18 +281,54 @@ def q10():
 #avisar ao cliente a inexistência de lugares. A leitura do número 0 (zero) para o voo
 #desejado indica o término da leitura de reservas.
 
+
+
+
+
+
 #14. Faça um programa que armazene 50 números inteiros em uma lista. O programa
 #deve gerar e imprimir uma segunda lista em que cada elemento é o quadrado do
 #elemento da primeira lista.
+def q14() -> None:
+    lista_original: int = []
+    for i in range (10):
+        lista_original.append(random.randint(1,30))
+    print(f'Lista Original (aleatória): {lista_original}')
+    lista_quadrados: list[int] = []
+    for num in lista_original:
+        quadrado = num*2
+        lista_quadrados.append(quadrado)
+    print(f'Lista dos Quadrados: {lista_quadrados}')
+
+
+
+
+
+
 
 #15. Faça um programa que leia e armazene vários números, até digitar o número
 #0. Imprimir quantos números iguais ao último número foram lidos. O limite de
 #números é 100.
 
+
+
 #16. Crie um programa para ler um conjunto de 100 números reais e informe:
 #• quantos números lidos são iguais a 30
 #• quantos são maior que a média
 #• quantos são iguais a média
+def q16() ->None:
+    lista_reais: list[float] = []
+    soma_total = 0.0
+    for i in range (10):
+        num = random.uniform(10.0,50.0)
+        num = round(num,1)
+        lista_reais.append(num)
+        soma_total += num
+    media = soma_total/10
+    print(f'Lista Original:  {lista_reais[:10]}')
+    print(f'Média: {media:.2f}\n')
+#terminar, ainda inacabado
+
 
 #17. Faça um programa que leia um conjunto de 30 valores inteiros, armazene-os em
 #uma lista e os imprima ao contrário da ordem de leitura.

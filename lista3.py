@@ -5,6 +5,7 @@ from utilprof import inputint, inputfloat, gerar_palavra
 import random
 from typing import Final
 import math
+import matplotlib.pyplot as plt
 
 
 def exemploPara(): # Quando se sabe a qtde de repetições
